@@ -1,5 +1,5 @@
-import {component$, Slot} from "@builder.io/qwik";
-import {Link, useNavigate} from "@builder.io/qwik-city";
+import {component$, Slot} from "@qwik.dev/core";
+import {Link, useNavigate} from "@qwik.dev/router";
 import styles from './index.module.css'
 
 export default component$(() => {
