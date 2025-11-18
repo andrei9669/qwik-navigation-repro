@@ -6,10 +6,10 @@ import {handlePreload} from "~/util/client-navigate";
 export default component$(() => {
     const nav = useNavigate()
 
-    const navigate = (path: string) => $(async () => {
-        await handlePreload(path);
-        return nav(path);
-    })
+    const navigate = (path: string) => [
+        $(() => handlePreload(path)),
+        $(() => nav(path))
+    ]
     return (
         <>
             <nav class={styles.nav}>
