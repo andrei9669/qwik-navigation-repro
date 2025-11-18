@@ -1,8 +1,10 @@
-import {$, component$, useTask$} from "@qwik.dev/core";
+import {component$, useTask$} from "@qwik.dev/core";
 
 export default component$(() => {
-    useTask$($(() => {
-        console.log("page-2")
-    }))
-    return <div>Page-2</div>
+    console.log("render: page-2")
+
+    useTask$(() => {
+        console.log("useTask: page-2")
+    })
+    return <h1>Page-2</h1>
 });

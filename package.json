@@ -26,7 +26,7 @@
     "@eslint/js": "latest",
     "@types/node": "20.19.0",
     "eslint": "9.32.0",
-    "eslint-plugin-qwik": "2.0.0-beta.13",
+    "eslint-plugin-qwik": "2.0.0-beta.14",
     "globals": "16.4.0",
     "prettier": "3.6.2",
     "typescript": "5.4.5",
@@ -35,7 +35,7 @@
     "undici": "*",
     "vite": "7.1.11",
     "vite-tsconfig-paths": "^4.2.1",
-    "@qwik.dev/router": "2.0.0-beta.13",
-    "@qwik.dev/core": "2.0.0-beta.13"
+    "@qwik.dev/router": "2.0.0-beta.14",
+    "@qwik.dev/core": "2.0.0-beta.14"
   }
 }
