@@ -12,20 +12,24 @@ export default component$(() => {
             return handlePreload(path);
         }),
         $(() => {
-            console.log("nav:", path)
+            console.log("button.onClick.nav:", path)
             return nav(path);
         })
     ]
+
+    const onLinkClick = $((_: unknown, e: HTMLAnchorElement) => {
+        console.log("link.onClick.href: ", e.href)
+    });
     return (
         <>
             <nav class={styles.nav}>
                 <div>
                     <Link href="/">Home</Link>
-                    <Link href="/page-1" onClick$={(_, e) => console.log("onClick.href: ", e.href)}>Page-1</Link>
-                    <Link href="/page-2" onClick$={(_, e) => console.log("onClick.href: ", e.href)}>Page-2</Link>
-                    <Link href="/page-3" onClick$={(_, e) => console.log("onClick.href: ", e.href)}>Page-3</Link>
-                    <Link href="/page-4" onClick$={(_, e) => console.log("onClick.href: ", e.href)}>Page-4</Link>
-                    <Link href="/page-5" onClick$={(_, e) => console.log("onClick.href: ", e.href)}>Page-5</Link>
+                    <Link href="/page-1" onClick$={onLinkClick}>Page-1</Link>
+                    <Link href="/page-2" onClick$={onLinkClick}>Page-2</Link>
+                    <Link href="/page-3" onClick$={onLinkClick}>Page-3</Link>
+                    <Link href="/page-4" onClick$={onLinkClick}>Page-4</Link>
+                    <Link href="/page-5" onClick$={onLinkClick}>Page-5</Link>
                 </div>
                 <div>
                     <button onClick$={navigate("/")}>home</button>
